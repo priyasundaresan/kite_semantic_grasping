@@ -1,0 +1,1 @@
+source docker/entrypoint.sh
