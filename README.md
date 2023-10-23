@@ -29,14 +29,25 @@ panda_docker_env      latest    e6200cd56f80   3 hours ago   28.4GB
 ```
 
 ## Running the Demo
+* Go to the `docker` directory and launch a container:
+```
+cd /path/to/kite_semanic_grasping/docker
+./docker_run.py
+```
+* You should now be inside the Docker container. Run the following to load all dependencies:
+```
+cd /host/kite_semanic_grasping
+. ./paths.sh # Equivalently, source paths.sh
+pip install -e .
+```
 * Go to the `tasks` directory
 ```
-cd /path/to/kite_semantic_grasping/panda_gym/envs/tasks
+cd /host/kite_semantic_grasping/panda_gym/envs/tasks
 ```
 * Run `python grasp.py`
 * This script will drop a randomly sample object, load an example language instruction (i.e. 'Pick up the soap by the dispenser'), visualize the associated heatmap, visualize generated grasps, and then execute the grasp nearest the predicted keypoint
-* NOTE: Press `q` after visualizing the keypoint heatmap, and also after visualizing the distribution of grasp candidates
+* NOTE: Press `q` after visualizing the keypoint heatmap, and also after visualizing the distribution of grasp candidates, to run the episode (the visualizations are blocking)
+* When done, you can exit the Docker container with `Ctrl A+D`
 
 ## Training your Own Keypoint Models
 * See [here]() for the training code for KITE's keypoint module
-
