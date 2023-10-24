@@ -51,5 +51,8 @@ cd /host/panda_gym/envs/tasks
 * NOTE: Press `q` after visualizing the keypoint heatmap, and also after visualizing the distribution of grasp candidates, to run the episode (the visualizations are blocking)
 * When done, you can exit the Docker container with `Ctrl A+D`
 
-## Training your Own Keypoint Models
-* See [here](https://github.com/priyasundaresan/kite_keypoint_training) for the training code for KITE's keypoint module
+## Training Your Own Keypoint Models
+* See [here](https://github.com/priyasundaresan/kite_keypoint_training) for the training code for KITE's grounding module
+
+## Training your Own Keypoint-Conditioned Skills
+* See [here](https://github.com/priyasundaresan/pointnet2_primitives/tree/master) for the training code for KITE's keypoint-conditioned skill policies
